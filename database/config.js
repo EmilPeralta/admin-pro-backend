@@ -3,7 +3,7 @@ const mongoose = require('mongoose'); //Importación del paquete
 const dbConnection = async ()=>{
 
     try{
-                              //Esta dirección la tomamos de la base de datos
+                            //Esta dirección la tomamos de la base de datos(ver .env)
         await mongoose.connect(process.env.DB_CNN);
 
         console.log('DB online');
