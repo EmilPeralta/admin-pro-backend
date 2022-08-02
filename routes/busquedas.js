@@ -3,7 +3,7 @@
 // =====================================================
 
 const { Router } = require("express");
-const { getTodo } = require("../controller/busquedas");
+const { getTodo, getDocumentoColeccion } = require("../controller/busquedas");
 const { validarJWT } = require("../middlewares/validar-jwt");
 // const { validarCampos } = require("../middlewares/validar-campos");
 // const ( check ) = require("express-validator");

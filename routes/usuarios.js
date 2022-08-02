@@ -13,7 +13,7 @@ router.get('/', validarJWT, getUsuarios );
 
 router.post('/',
     [
-        validarJWT,
+        // validarJWT,
         check('nombre', 'El nombre es obligatorio').notEmpty(),
         check('apellido', 'El apellido es obligatorio').notEmpty(),
         check('password', 'El password es obligatorio').notEmpty(),

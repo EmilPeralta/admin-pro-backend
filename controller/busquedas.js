@@ -34,9 +34,7 @@ getDocumentoColeccion = async(req, res = response) => {
     
     switch (tabla) {
         case 'usuario':
-            data = await Usuario.find({nombre: regex})
-                                .populate('usuario', 'nombre img')
-                                .populate('hospital', 'nombre img');
+            data = await Usuario.find({nombre: regex});
         break;
 
         case 'medico':
@@ -47,7 +45,7 @@ getDocumentoColeccion = async(req, res = response) => {
 
         case 'hospital':
             data = await Hospital.find({nombre: regex})
-                                 .populate('usuario', 'nombre img');
+                                 .populate('usuario', 'nombre img')
         break;
     
         default:
@@ -56,11 +54,11 @@ getDocumentoColeccion = async(req, res = response) => {
                         msg: 'La tabla tiene que ser: usuario/medico/hospital'
                     });
     }
-
+                    
         res.json({
             ok: true,
             resultados: data
-        });
+        })
 }
 
 module.exports = {

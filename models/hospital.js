@@ -1,6 +1,9 @@
+//MODELO
+//==========================================================
+
 const { Schema, model} = require('mongoose');
 
-const HospitalSchema = Schema({
+const hospitalSchema = Schema({
 
     nombre:   { type: String, require: true },
     img:      { type: String },
@@ -8,9 +11,9 @@ const HospitalSchema = Schema({
     
 }, {collection: 'hospitales'});
 
-HospitalSchema.method('toJSON',function(){
+hospitalSchema.method('toJSON',function(){
     const {__v, ...object} = this.toObject();
     return object;
 });
 
-module.exports = model('Hospital', HospitalSchema);
+module.exports = model('Hospital', hospitalSchema);

@@ -1,7 +1,6 @@
 //MODELO
 //==========================================================
 
-
 const {Schema, model} = require("mongoose");
 
 const medicoSchema = Schema({
