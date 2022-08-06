@@ -8,8 +8,8 @@
     },
   
   "scripts": {
-    "start:dev": "nodemon index.js",
-    "start": "node index.js" 
+    "start:dev": "nodemon index.js", 
+    "start": "serve -s build" 
   },
   "keywords": [],
   "author": "",
@@ -27,3 +27,4 @@
     "uuid": "^8.3.2"
   }
 }
+
